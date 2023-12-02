@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video player</title>
+    <h1><center>TECNOLOGICO SUPERIOR DE MISANTLA</center></h1>
+
+    <center><a href="https://misantla.tecnm.mx/">
+        <img src="./logo de tec.jpg" alt="800"></center>
+
+    </a>
+    <link rel="stylesheet" href="./proyecto2html css/stylus.css">
+  
+<body>
+    <h3><a href="https://es.wikipedia.org/wiki/Instituto_Tecnol%C3%B3gico_Superior_de_Misantla">LAS CARRERAS QUE OFRECE EL TEC DE MISANTLA
+
+       <img src="./rrgver.jpg" alt="">
+    </a></h3>
+
+    
+    <style>
+        a {
+            display: block;
+            width: 500px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 600;
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+    
+    </head>
+        <div class="wrapper">
+            <div class="player">
+                <img src="" alt="">
+                <center><video  controls  autoplay muted src="./video3.mp4"width=200></video></center>
+                <button class="button " id="backward" aria-label="retroceder 10 segundos " title="retroceder 10 segundos"></button>
+                <button class="button" id="play" aria-label="reproducir" 1title="reproducir 10 segundos"></button>
+                <button class="button" hidden id="pause" aria-label="pausar" title="pausar"></button>
+                <button class="button" id="forward" aria-label="adelantar 10 segundos" title="adelantar 10 segundos"></button>
+            
+        </div>
+       
+    </div>
+        <script > 
+        const $video  = document.querySelector('#video')
+        const $play  = document.querySelector('#play')
+        const $pause  = document.querySelector('#pause')
+
+        $play.addEventListener('clic', handleplay)
+        $pause.addEventListener('clic', handlepause)
+
+        function handleplay() {
+            $video.play()
+            $video.hidden = true
+            $pause.hidden = false
+            console.log('le diste clic al boton de play')
+
+
+        }
+
+        $backward.addEventListener('clic', handleBackrward)
+        
+        function handBackward() {
+
+            console.log('para atras 10 segundos', $video.CurrentTime)
+
+
+        }
+
+        $forward.addEventListener('clic', handleforward)
+        
+        function handforward() {
+            
+           
+            console.log('para adelantar 10 segundos', $video.CurrentTime)
+
+        }
+        
+        </script>
+</body>
+</html>
